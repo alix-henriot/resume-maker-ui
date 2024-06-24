@@ -1,0 +1,140 @@
+{
+    "profile": {
+        "name": "Alix Henriot",
+        "description": "Passionné par la programmation, l’automobile et la recherche de solutions innovantes pour mes clients.",
+        "picture": "https://avatars.githubusercontent.com/u/147206208?v=4",
+        "github": "/alix-henriot",
+        "languages": [
+            {
+                "language": "Français",
+                "level": "100"
+            },
+            {
+                "language": "Anglais",
+                "level": "85"
+            },
+            {
+                "language": "Allemand",
+                "level": "20"
+            }
+        ]
+    },
+    "experiences" : [
+        {   
+            "id": 1,
+            "title": "Agent Service Client",
+            "company": "Miles Mobility",
+            "start": "01/2023",
+            "end": "07/2024",
+            "country": "DE",
+            "tasks" : [
+                "Managed incoming calls and responded to queries via email on Zendesk.",
+                "Remotely diagnose vehicle issues and assist agents in resolving advanced technical problems."
+            ],
+            "skills": [
+                "Service client",
+                "Gestion parc automobile"
+            ],
+            "achievements": [
+                {
+                    "value": "93%",
+                    "kpi": "CSAT",
+                    "description": "Satisfaction client global à MILES Mobility"
+                }
+            ]
+        },
+        {   
+            "id": 2,
+            "title": "Conseiller Service Client pour Meta",
+            "company": "Concentrix",
+            "start": "11/2021",
+            "end": "12/2022",
+            "country": "DE",
+            "tasks" : [
+                "Answered product and service questions for SMB Advertisers via outbound calls, emails and live chat.",
+                "Conducted problem-solving and troubleshooting for global corporations and digital agencies (Business Manager queries, Pixel and Ad performance)."
+            ],
+            "skills": [
+                "Service client",
+                "SEA"
+            ]
+        },
+        {   
+            "id": 3,
+            "title": "Représentant Commercial (BtoB) pour Total Energies",
+            "company": "Freelance",
+            "start": "07/2021",
+            "end": "11/2021",
+            "country": "FR",
+            "tasks" : [
+                "Conducted door-to-door SMB prospection and direct selling.",
+                "Renegotiated and signed energy contracts with a change of suppliers."
+            ],
+            "skills": [
+                "Prospection Commercial"
+            ],
+            "achievements": [
+                {
+                    "value": "18",
+                    "kpi": "Contrats",
+                    "description": "Signés pour le compte de Total Energies"
+                }
+            ]
+        }
+    ],
+    "educations": [
+        {
+            "type": "BAC+2",
+            "title": "DUT Gestion des Entreprises et des Administrations",
+            "description": "",
+            "university": "IUT de Bordeaux"
+        },
+        {
+            "type": "Certifications",
+            "title": "HTML & CSS, Javascript, NoSQL, React.js, Node.js",
+            "description": "",
+            "university": "OPENCLASSROOMS"
+        }
+    ],
+    "skills": [
+        "Service client",
+        "Développement Full Stack",
+        "Prospection Commercial",
+        "Publicité digitale",
+        "Modélisation 3D"
+    ],
+    "projects": [
+        {
+            "name": "Copycat",
+            "description": "Une extension Chrome pour copier-coller plus rapidement.",
+            "link": "",
+            "stack": [
+                "Plasmo",
+                "React",
+                "Typescript",
+                "Express.js",
+                "MongoDB"
+            ],
+            "update": "Copycat pivote pour devenir une solution de gestion des contacts clients par email.",
+            "skills": [
+                "Full Stack JS",
+                "Modélisation 3D"
+            ]
+        },
+        {
+            "name": "Resume Maker UI",
+            "description": "Une App JavasScript pour créer son CV à partir de shadcn/ui.",
+            "link": "",
+            "stack": [
+                "Next.js",
+                "React",
+                "Typescript"
+            ],
+            "update": "Copycat pivote pour devenir une solution de gestion des contacts clients par email.",
+            "skills": [
+                "Full Stack JS",
+                "Modélisation 3D"
+            ]
+        }
+    ]
+}
