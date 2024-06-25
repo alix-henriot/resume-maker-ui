@@ -16,12 +16,21 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Page, Text, View, Document, StyleSheet, usePDF } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
+import TestResume from '@/components/Resume'
 
 type ResumeLayoutProps = {
     children: React.ReactNode,
 }
 
 export default function ResumeLayout ({ children }: ResumeLayoutProps) {
+    const [instance, updateInstance] = usePDF({ document: <TestResume/> });
+
+    const ExportResumeToPDF = () => {
+        ReactPDF.render(<TestResume />, `resume/example.pdf`);
+
+    }
 
     const formSchema = z.object({
         name: z.string().min(2, {
@@ -88,9 +97,17 @@ export default function ResumeLayout ({ children }: ResumeLayoutProps) {
             </div>
 
         </div>
-        <div id='viewer' className='w-full h-full flex flex-col justify-center items-center'>
-            <ScrollArea className='h-full w-full'>
-                <div id='resume' className='w-[210mm] h-[297mm] bg-white'>
+        <div id='viewer' className='w-full h-full'>
+            <div className='w-full flex flex-row justify-end p-4 bg-slate-50 border border-l-0'>
+                <Button onClick={ExportResumeToPDF}>
+                    Export
+                </Button>
+                {/*<a href={instance.url} download="test.pdf">
+                    Download
+                </a>*/}
+            </div>
+            <ScrollArea className='h-full w-full flex flex-row justify-center items-center'>
+                <div id='resume' className='w-[210mm] h-[297mm] bg-white mx-auto my-4'>
                     {children}
                 </div>
             </ScrollArea>
