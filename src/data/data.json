@@ -3,21 +3,7 @@
         "name": "Alix Henriot",
         "description": "Passionné par la programmation, l’automobile et la recherche de solutions innovantes pour mes clients.",
         "picture": "https://avatars.githubusercontent.com/u/147206208?v=4",
-        "github": "/alix-henriot",
-        "languages": [
-            {
-                "language": "Français",
-                "level": "100"
-            },
-            {
-                "language": "Anglais",
-                "level": "85"
-            },
-            {
-                "language": "Allemand",
-                "level": "20"
-            }
-        ]
+        "github": "/alix-henriot"
     },
     "experiences" : [
         {   
@@ -26,10 +12,10 @@
             "company": "Miles Mobility",
             "start": "01/2023",
             "end": "07/2024",
-            "country": "DE",
+            "time": "1 an 6 mois",
             "tasks" : [
-                "Managed incoming calls and responded to queries via email on Zendesk.",
-                "Remotely diagnose vehicle issues and assist agents in resolving advanced technical problems."
+                "Réponse aux emails et appels téléphoniques en français et en anglais via Zendesk.",
+                "Assistance technique et résolution de problèmes à l'aide de notre logiciel de gestion de flotte."
             ],
             "skills": [
                 "Service client",
@@ -49,10 +35,11 @@
             "company": "Concentrix",
             "start": "11/2021",
             "end": "12/2022",
-            "country": "DE",
+            "time": "1 an",
             "tasks" : [
-                "Answered product and service questions for SMB Advertisers via outbound calls, emails and live chat.",
-                "Conducted problem-solving and troubleshooting for global corporations and digital agencies (Business Manager queries, Pixel and Ad performance)."
+                "Gestion des chats, des appels sortants et des emails en français et en anglais pour les annonceurs professionnels sur Facebook.",
+                "Résolution des problèmes de performance des publicités et des comptes clients.",
+                "Collaboration étroite avec les gestionnaires de comptes pour accompagner les annonceurs de premier plan sur Facebook."
             ],
             "skills": [
                 "Service client",
@@ -61,14 +48,14 @@
         },
         {   
             "id": 3,
-            "title": "Représentant Commercial (BtoB) pour Total Energies",
+            "title": "Représentant Commercial BtoB pour Total Energies",
             "company": "Freelance",
             "start": "07/2021",
             "end": "11/2021",
-            "country": "FR",
+            "time": "4 mois",
             "tasks" : [
-                "Conducted door-to-door SMB prospection and direct selling.",
-                "Renegotiated and signed energy contracts with a change of suppliers."
+                "Prospection et vente directe aux PME en porte-à-porte.",
+                "Renégociation et signature de 18 contrats énergétiques avec un changement de fournisseur."
             ],
             "skills": [
                 "Prospection Commercial"
@@ -84,16 +71,24 @@
     ],
     "educations": [
         {
-            "type": "BAC+2",
-            "title": "DUT Gestion des Entreprises et des Administrations",
+            "type": "Diplôme Universitaire de Technologie ",
+            "title": "Gestion des Entreprises et des Administrations ",
             "description": "",
-            "university": "IUT de Bordeaux"
+            "university": "IUT de Bordeaux",
+            "skills": [
+                "Comptabilité",
+                "Controle de Gestion",
+                "BAC+2"
+            ]
         },
         {
             "type": "Certifications",
-            "title": "HTML & CSS, Javascript, NoSQL, React.js, Node.js",
+            "title": "HTML & CSS, Javascript, Angular, React.js, Node.js",
             "description": "",
-            "university": "OPENCLASSROOMS"
+            "university": "OPENCLASSROOMS",
+            "skills": [
+                "Développement d'Application Javascript Full Stack "
+            ]
         }
     ],
     "skills": [
@@ -101,39 +96,35 @@
         "Développement Full Stack",
         "Prospection Commercial",
         "Publicité digitale",
-        "Modélisation 3D"
+        "Modélisation 3D",
+        "Anglais courant",
+        "Français langue maternelle"
     ],
     "projects": [
         {
-            "name": "Copycat",
+            "title": "Porteur de projet",
+            "company": "Copycat",
+            "start": "Depuis 07/2023",
+            "end": "",
+            "time": "1 an",
             "description": "Une extension Chrome pour copier-coller plus rapidement.",
-            "link": "",
+
+            "tasks" : [
+                "Création d'une extension Chrome en React Typescript et publication sur le Chrome Web Store.",
+                "Développement du backend avec Express pour gérer les sessions utilisateurs et mesurer l'activité."
+            ],
+            "skills": [
+                "Extension Chrome",
+                "Développement Backend",
+                "LangChain",
+                "Modélisation 3D"
+            ],
             "stack": [
                 "Plasmo",
-                "React",
+                "React.js",
                 "Typescript",
                 "Express.js",
                 "MongoDB"
-            ],
-            "update": "Copycat pivote pour devenir une solution de gestion des contacts clients par email.",
-            "skills": [
-                "Full Stack JS",
-                "Modélisation 3D"
-            ]
-        },
-        {
-            "name": "Resume Maker UI",
-            "description": "Une App JavasScript pour créer son CV à partir de shadcn/ui.",
-            "link": "",
-            "stack": [
-                "Next.js",
-                "React",
-                "Typescript"
-            ],
-            "update": "Copycat pivote pour devenir une solution de gestion des contacts clients par email.",
-            "skills": [
-                "Full Stack JS",
-                "Modélisation 3D"
             ]
         }
     ]

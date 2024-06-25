@@ -16,34 +16,34 @@ type ResumeContentProps = {}
 export default function TestResume ({}: ResumeContentProps) {
 
   return (
-    <div className='px-16 py-20'>
+    <div className='px-16 py-20 bg-white'>
 
         <div className='w-full h-full grid grid-cols-[1.3fr,2fr] gap-4'>
 
             <div id='left' className='flex flex-col gap-4'>
 
-                <div id="profile" className='p-6 rounded-lg flex flex-col gap-2 shadow-none'>
+                <div id="profile" className='p-5 rounded-lg flex flex-col gap-2 shadow-none'>
                     <div className='flex flex-row gap-4 items-center'>
                         <Avatar className='w-12 h-12'>
                             <AvatarImage src={data.profile.picture} alt='profile-picture'/>
                         </Avatar>
                         <div className='flex flex-col gap-1'>
-                            <h2 className='text-md font-medium leading-none'>{data.profile.name}</h2>
+                            <h1 className='text-md font-medium leading-none'>{data.profile.name}</h1>
                             <Link className='flex items-center text-muted-foreground' href={`https://github.com${data.profile.github}`}><Github className='w-4 h-4'/>{data.profile.github}</Link>
                         </div>
                     </div>
                     <p className='text-sm text-muted-foreground'>{data.profile.description}</p>
                 </div>
 
-                <div id='skills' className='p-6 rounded-lg flex flex-col gap-1'>
-                        <h2 className="mb-4 text-md font-medium leading-none">Compétences</h2>
+                <div id='skills' className='p-5 rounded-lg flex flex-col gap-1'>
+                        <h1 className="mb-4 text-md font-medium leading-none">Compétences</h1>
                         {
                             data.skills.map(
                                 (skill, index) => (
                                         <div key={index}>
-                                            <div className="text-sm">
+                                            <p className="text-sm">
                                             {skill}
-                                            </div>
+                                            </p>
                                             {index !== data.skills.length - 1 && <Separator className="my-2 bg-gradient-to-l from-slate-50" />}
                                         </div>
                                 )
@@ -51,33 +51,39 @@ export default function TestResume ({}: ResumeContentProps) {
                         }
                 </div>
 
-                <div id='projects' className='p-6 rounded-lg  flex flex-col gap-1'>
-                    <h2 className="mb-4 text-md font-medium leading-none">Projets personnels</h2>
+                <div id='projects' className='px-5 py-3 rounded-lg  flex flex-col gap-1'>
+                    <h1 className="mb-4 text-md font-medium leading-none">Projets personnels</h1>
                     {
                         data.projects && data.projects.map(
                             (project, index) => (                    
-                                <div key={index} className='flex flex-col'>
-                                    <div className='mb-4'>
-                                        <h4 className='flex text-md items-center mb-1'>{project.name} <ExternalLink className='ml-2 w-4 h-4'/></h4>
+                                <div key={index} className='flex flex-col gap-2 mb-4'>
+                                    <h4 className='text-md font-semibold'>{project.title}</h4>
+                                    <div className='flex flex-row gap-2 flex-wrap'>
+                                        <Badge><p>{project.company}</p></Badge>
+                                        <Badge variant="secondary"><p>{project.start}</p></Badge>
+                                        {/*<Badge variant="secondary">{project.time}</Badge>*/}
+
                                         <p className='text-sm text-muted-foreground'>
-                                            {project.description}
+                                        {project.description}
                                         </p>
                                     </div>
-                                        
-                                    {/*<div className='p-4 rounded-lg bg-muted text-sm text-muted-foreground mb-4'>
-                                    <p className='flex font-semibold mb-1 items-center'>Mise à Jour:</p>
-                                    <p className='mb-2'>
-                                        {project.update}
-                                    </p>
-                                    <Link href="https://youtu.be" className='flex font-medium underline items-basline'>Voir la Video <ExternalLink className='ml-1 w-4 h-4'/></Link>
-                                    </div>*/}
+                                    
+                                    <ul className='flex flex-col gap-4 text-sm'>
+                                        {project.tasks.map(
+                                            (task, index) => (
+                                                <li key={index}>
+                                                    {task}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
 
                                     <div className='flex flex-row flex-wrap gap-2 text-sm items-center mb-4'>
                                         <p>Stack :</p>
                                         {
                                             project.stack && project.stack.map(
                                                 (stack, index) => (
-                                                    <Badge key={index} variant="secondary">{stack}</Badge>
+                                                    <Badge key={index} variant="secondary"><p>{stack}</p></Badge>
                                                 )
                                             )
                                         }
@@ -91,25 +97,25 @@ export default function TestResume ({}: ResumeContentProps) {
 
             </div>
 
-            <div id='right' className='flex flex-col gap-4'>
+            <div id='right' className='flex flex-col gap-2'>
 
-                <div id='experience' className='p-6 rounded-lg flex flex-col'>
+                <div id='experience' className='px-5 py-3 rounded-lg flex flex-col'>
                     <div>
-                        <h2 className="mb-4 text-md font-medium leading-none">Expérience</h2>
+                        <h1 className="mb-4 text-md font-medium leading-none">Expérience</h1>
                     </div>
 
                         {
                             data.experiences.map(
                                 (experience, index) => (
-                                    <div key={index} className='flex flex-col gap-3 mb-6'>
+                                    <div key={index} className='flex flex-col gap-3 mb-5'>
                                         <h4 className='text-md font-semibold'>{experience.title}</h4>
                                         <div className='flex flex-row gap-2 flex-wrap'>
-                                            <Badge>{experience.company}</Badge>
-                                            <Badge variant="secondary">{experience.start} - {experience.end}</Badge>
-                                            <Badge variant="secondary">{experience.country}</Badge>
+                                            <Badge><p>{experience.company}</p></Badge>
+                                            <Badge variant="secondary"><p>{experience.start} - {experience.end}</p></Badge>
+                                            <Badge variant="secondary"><p>{experience.time}</p></Badge>
                                         </div>
 
-                                        <ul className='flex flex-col gap-4 text-sm'>
+                                        <ul className='flex flex-col gap-3 text-sm'>
                                             {experience.tasks.map(
                                                 (task, index) => (
                                                     <li key={index}>
@@ -131,21 +137,23 @@ export default function TestResume ({}: ResumeContentProps) {
                         }
                 </div>
 
-                <div id='education' className='p-6 rounded-lg flex flex-col gap-1'>
-                    <h2 className="mb-4 text-md font-medium leading-none">Diplômes & Certifications</h2>
+                <div id='education' className='px-5 py-3 rounded-lg flex flex-col gap-1'>
+                    <h1 className="mb-4 text-md font-medium leading-none">Diplômes & Certifications</h1>
+                    <div className='grid grid-rows-2'>
                     {
                         data.educations.map(
                             (education, index) => (
                                 <div key={index} className='flex flex-col gap-2 mb-4'>
-                                    <h4 className='text-md font-medium'>{education.title}</h4>
+                                    <h4 className='text-md font-semibold'>{education.title}</h4>
                                     <div className='flex flex-row flex-wrap gap-2'>
-                                        <Badge variant="default" className='w-fit'>{education.type}</Badge>
-                                        <Badge variant="secondary" className='w-fit'>{education.university}</Badge>
+                                        <Badge variant="default" className='w-fit'><p>{education.type}</p></Badge>
+                                        <Badge variant="secondary" className='w-fit'><p>{education.university}</p></Badge>
                                     </div>
                                 </div>
                             )
                         )
                     }
+                    </div>
                 </div>
 
             </div>
